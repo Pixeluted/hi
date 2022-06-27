@@ -1555,4 +1555,4 @@ Description.TextSize = 14.000
 Description.TextWrapped = true
 Description.TextXAlignment = Enum.TextXAlignment.Left
 
-return TopBar, TabContent, Tabs, Template, Notifications
+return TopBar, TabContent, Tabs, Template, Notifications, Main
