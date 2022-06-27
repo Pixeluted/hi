@@ -1522,6 +1522,7 @@ Template.BackgroundColor3 = Color3.fromRGB(49, 53, 58)
 Template.BorderSizePixel = 0
 Template.Position = UDim2.new(0.655357897, 0, 0.902989805, 0)
 Template.Size = UDim2.new(0.689284623, 0, 0.194020584, 0)
+Template.Visible = false
 
 UICorner_58.Parent = Template
 
