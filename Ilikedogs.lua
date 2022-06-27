@@ -115,7 +115,7 @@ local UICorner_44 = Instance.new("UICorner")
 local Keybind = Instance.new("Frame")
 local UICorner_45 = Instance.new("UICorner")
 local TextLabel_16 = Instance.new("TextLabel")
-local KeybindText = Instance.new("TextLabel")
+local KeybindText = Instance.new("TextButton")
 local UICorner_46 = Instance.new("UICorner")
 local SupplyDropsTab = Instance.new("ScrollingFrame")
 local UIListLayout_5 = Instance.new("UIListLayout")
@@ -991,6 +991,7 @@ KeybindText.Text = "Q"
 KeybindText.TextColor3 = Color3.fromRGB(253, 253, 253)
 KeybindText.TextScaled = true
 KeybindText.TextWrapped = true
+KeybindText.AutoButtonColor = false
 
 UICorner_46.Parent = KeybindText
 
@@ -1521,7 +1522,6 @@ Template.BackgroundColor3 = Color3.fromRGB(49, 53, 58)
 Template.BorderSizePixel = 0
 Template.Position = UDim2.new(0.655357897, 0, 0.902989805, 0)
 Template.Size = UDim2.new(0.689284623, 0, 0.194020584, 0)
-Template.Visible = false
 
 UICorner_58.Parent = Template
 
