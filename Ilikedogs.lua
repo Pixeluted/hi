@@ -152,12 +152,19 @@ local ToggleBackground_17 = Instance.new("TextButton")
 local UICorner_58 = Instance.new("UICorner")
 local TheToggle_17 = Instance.new("Frame")
 local UICorner_59 = Instance.new("UICorner")
+local SettingsTab = Instance.new("ScrollingFrame")
+local UIListLayout_7 = Instance.new("UIListLayout")
+local Keybind_2 = Instance.new("Frame")
+local UICorner_60 = Instance.new("UICorner")
 local TextLabel_22 = Instance.new("TextLabel")
+local KeybindText_2 = Instance.new("TextButton")
+local UICorner_61 = Instance.new("UICorner")
+local TextLabel_23 = Instance.new("TextLabel")
 local Tabs = Instance.new("ScrollingFrame")
 local ESPTab_2 = Instance.new("Frame")
 local ButtonName = Instance.new("TextLabel")
 local DetectButton = Instance.new("TextButton")
-local UIListLayout_7 = Instance.new("UIListLayout")
+local UIListLayout_8 = Instance.new("UIListLayout")
 local VisualsTab_2 = Instance.new("Frame")
 local ButtonName_2 = Instance.new("TextLabel")
 local DetectButton_2 = Instance.new("TextButton")
@@ -170,22 +177,22 @@ local DetectButton_4 = Instance.new("TextButton")
 local ToolsTab_2 = Instance.new("Frame")
 local ButtonName_5 = Instance.new("TextLabel")
 local DetectButton_5 = Instance.new("TextButton")
-local Tab6 = Instance.new("Frame")
+local SettingsTab_2 = Instance.new("Frame")
 local ButtonName_6 = Instance.new("TextLabel")
 local DetectButton_6 = Instance.new("TextButton")
 local Tab7 = Instance.new("Frame")
 local ButtonName_7 = Instance.new("TextLabel")
 local DetectButton_7 = Instance.new("TextButton")
-local UICorner_60 = Instance.new("UICorner")
+local UICorner_62 = Instance.new("UICorner")
 local TopBar = Instance.new("TextLabel")
 local Notifications = Instance.new("Frame")
-local UIListLayout_8 = Instance.new("UIListLayout")
+local UIListLayout_9 = Instance.new("UIListLayout")
 local Template = Instance.new("Frame")
-local UICorner_61 = Instance.new("UICorner")
+local UICorner_63 = Instance.new("UICorner")
 local Title = Instance.new("TextLabel")
 local Description = Instance.new("TextLabel")
 
-ScreenGui.Parent = game.CoreGui
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Main.Name = "Main"
@@ -1253,18 +1260,74 @@ TheToggle_17.Size = UDim2.new(0.5, 0, 1, 0)
 
 UICorner_59.Parent = TheToggle_17
 
-TextLabel_22.Parent = Main
+SettingsTab.Name = "SettingsTab"
+SettingsTab.Parent = TabContent
+SettingsTab.Active = true
+SettingsTab.AnchorPoint = Vector2.new(0.5, 0.5)
+SettingsTab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SettingsTab.BackgroundTransparency = 1.000
+SettingsTab.Position = UDim2.new(0.502263784, 0, 0.519646943, 0)
+SettingsTab.Size = UDim2.new(0.995472014, 0, 0.960706174, 0)
+SettingsTab.Visible = false
+SettingsTab.ScrollBarThickness = 0
+SettingsTab.ScrollingEnabled = false
+
+UIListLayout_7.Parent = SettingsTab
+UIListLayout_7.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout_7.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_7.Padding = UDim.new(0.00999999978, 0)
+
+Keybind_2.Name = "Keybind"
+Keybind_2.Parent = SettingsTab
+Keybind_2.AnchorPoint = Vector2.new(0.5, 0.5)
+Keybind_2.BackgroundColor3 = Color3.fromRGB(64, 68, 76)
+Keybind_2.Position = UDim2.new(0.0450000018, 0, 0.112000003, 0)
+Keybind_2.Size = UDim2.new(0.899999976, 0, 0.0599999987, 0)
+
+UICorner_60.Parent = Keybind_2
+
+TextLabel_22.Parent = Keybind_2
 TextLabel_22.AnchorPoint = Vector2.new(0.5, 0.5)
 TextLabel_22.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_22.BackgroundTransparency = 1.000
-TextLabel_22.Position = UDim2.new(0.132247657, 0, 0.0910828635, 0)
-TextLabel_22.Size = UDim2.new(0.227372751, 0, 0.183427215, 0)
-TextLabel_22.Font = Enum.Font.GothamMedium
-TextLabel_22.Text = "Rake Evolved"
-TextLabel_22.TextColor3 = Color3.fromRGB(254, 254, 254)
+TextLabel_22.Position = UDim2.new(0.268600971, 0, 0.473150373, 0)
+TextLabel_22.Size = UDim2.new(0.5, 0, 0.800000012, 0)
+TextLabel_22.Font = Enum.Font.SourceSansSemibold
+TextLabel_22.Text = "Toggle UI"
+TextLabel_22.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_22.TextScaled = true
 TextLabel_22.TextSize = 14.000
 TextLabel_22.TextWrapped = true
+TextLabel_22.TextXAlignment = Enum.TextXAlignment.Left
+
+KeybindText_2.Name = "KeybindText"
+KeybindText_2.Parent = Keybind_2
+KeybindText_2.Active = false
+KeybindText_2.AnchorPoint = Vector2.new(0.5, 0.5)
+KeybindText_2.BackgroundColor3 = Color3.fromRGB(49, 53, 58)
+KeybindText_2.Position = UDim2.new(0.896658242, 0, 0.495320231, 0)
+KeybindText_2.Selectable = false
+KeybindText_2.Size = UDim2.new(0.140835837, 0, 0.629541337, 0)
+KeybindText_2.AutoButtonColor = false
+KeybindText_2.Text = "RightControl"
+KeybindText_2.TextColor3 = Color3.fromRGB(253, 253, 253)
+KeybindText_2.TextScaled = true
+KeybindText_2.TextWrapped = true
+
+UICorner_61.Parent = KeybindText_2
+
+TextLabel_23.Parent = Main
+TextLabel_23.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_23.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_23.BackgroundTransparency = 1.000
+TextLabel_23.Position = UDim2.new(0.132247657, 0, 0.0910828635, 0)
+TextLabel_23.Size = UDim2.new(0.227372751, 0, 0.183427215, 0)
+TextLabel_23.Font = Enum.Font.GothamMedium
+TextLabel_23.Text = "Rake Evolved"
+TextLabel_23.TextColor3 = Color3.fromRGB(254, 254, 254)
+TextLabel_23.TextScaled = true
+TextLabel_23.TextSize = 14.000
+TextLabel_23.TextWrapped = true
 
 Tabs.Name = "Tabs"
 Tabs.Parent = Main
@@ -1314,9 +1377,9 @@ DetectButton.TextScaled = true
 DetectButton.TextSize = 14.000
 DetectButton.TextWrapped = true
 
-UIListLayout_7.Parent = Tabs
-UIListLayout_7.SortOrder = Enum.SortOrder.LayoutOrder
-UIListLayout_7.Padding = UDim.new(0.00499999989, 0)
+UIListLayout_8.Parent = Tabs
+UIListLayout_8.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_8.Padding = UDim.new(0.00499999989, 0)
 
 VisualsTab_2.Name = "VisualsTab"
 VisualsTab_2.Parent = Tabs
@@ -1466,18 +1529,18 @@ DetectButton_5.TextScaled = true
 DetectButton_5.TextSize = 14.000
 DetectButton_5.TextWrapped = true
 
-Tab6.Name = "Tab6"
-Tab6.Parent = Tabs
-Tab6.AnchorPoint = Vector2.new(0.5, 0.5)
-Tab6.BackgroundColor3 = Color3.fromRGB(25, 117, 255)
-Tab6.BackgroundTransparency = 1.000
-Tab6.BorderSizePixel = 0
-Tab6.Position = UDim2.new(0.5, 0, 0.0379999988, 0)
-Tab6.Size = UDim2.new(1, 0, 0.0599999987, 0)
-Tab6.Visible = false
+SettingsTab_2.Name = "SettingsTab"
+SettingsTab_2.Parent = Tabs
+SettingsTab_2.AnchorPoint = Vector2.new(0.5, 0.5)
+SettingsTab_2.BackgroundColor3 = Color3.fromRGB(25, 117, 255)
+SettingsTab_2.BackgroundTransparency = 1.000
+SettingsTab_2.BorderSizePixel = 0
+SettingsTab_2.Position = UDim2.new(0.5, 0, 0.0379999988, 0)
+SettingsTab_2.Size = UDim2.new(1, 0, 0.0599999987, 0)
+SettingsTab_2.Visible = false
 
 ButtonName_6.Name = "ButtonName"
-ButtonName_6.Parent = Tab6
+ButtonName_6.Parent = SettingsTab_2
 ButtonName_6.AnchorPoint = Vector2.new(0.5, 0.5)
 ButtonName_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ButtonName_6.BackgroundTransparency = 1.000
@@ -1491,7 +1554,7 @@ ButtonName_6.TextSize = 14.000
 ButtonName_6.TextWrapped = true
 
 DetectButton_6.Name = "DetectButton"
-DetectButton_6.Parent = Tab6
+DetectButton_6.Parent = SettingsTab_2
 DetectButton_6.AnchorPoint = Vector2.new(0.5, 0.5)
 DetectButton_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 DetectButton_6.BackgroundTransparency = 1.000
@@ -1512,7 +1575,6 @@ Tab7.BackgroundTransparency = 1.000
 Tab7.BorderSizePixel = 0
 Tab7.Position = UDim2.new(0.5, 0, 0.0379999988, 0)
 Tab7.Size = UDim2.new(1, 0, 0.0599999987, 0)
-Tab7.Visible = false
 
 ButtonName_7.Name = "ButtonName"
 ButtonName_7.Parent = Tab7
@@ -1542,7 +1604,7 @@ DetectButton_7.TextScaled = true
 DetectButton_7.TextSize = 14.000
 DetectButton_7.TextWrapped = true
 
-UICorner_60.Parent = Main
+UICorner_62.Parent = Main
 
 TopBar.Name = "TopBar"
 TopBar.Parent = Main
@@ -1566,11 +1628,11 @@ Notifications.BackgroundTransparency = 1.000
 Notifications.Position = UDim2.new(0.920457542, 0, 0.779193401, 0)
 Notifications.Size = UDim2.new(0.152600497, 0, 0.426101536, 0)
 
-UIListLayout_8.Parent = Notifications
-UIListLayout_8.HorizontalAlignment = Enum.HorizontalAlignment.Right
-UIListLayout_8.SortOrder = Enum.SortOrder.LayoutOrder
-UIListLayout_8.VerticalAlignment = Enum.VerticalAlignment.Bottom
-UIListLayout_8.Padding = UDim.new(0.00999999978, 0)
+UIListLayout_9.Parent = Notifications
+UIListLayout_9.HorizontalAlignment = Enum.HorizontalAlignment.Right
+UIListLayout_9.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_9.VerticalAlignment = Enum.VerticalAlignment.Bottom
+UIListLayout_9.Padding = UDim.new(0.00999999978, 0)
 
 Template.Name = "Template"
 Template.Parent = Notifications
@@ -1581,7 +1643,7 @@ Template.Position = UDim2.new(0.655357897, 0, 0.902989805, 0)
 Template.Size = UDim2.new(0.689284623, 0, 0.194020584, 0)
 Template.Visible = false
 
-UICorner_61.Parent = Template
+UICorner_63.Parent = Template
 
 Title.Name = "Title"
 Title.Parent = Template
