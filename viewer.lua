@@ -16,7 +16,6 @@ local UICorner_7 = Instance.new("UICorner")
 local exit = Instance.new("TextButton")
 
 SupplyDropView.Name = "SupplyDropView"
-SupplyDropView.Parent = game.StarterGui.ScreenGui
 SupplyDropView.AnchorPoint = Vector2.new(0.5, 0.5)
 SupplyDropView.BackgroundColor3 = Color3.fromRGB(49, 53, 58)
 SupplyDropView.BackgroundTransparency = 0.500
