@@ -189,7 +189,7 @@ local UICorner_63 = Instance.new("UICorner")
 local Title = Instance.new("TextLabel")
 local Description = Instance.new("TextLabel")
 
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.Parent = game.CoreGui
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Main.Name = "Main"
