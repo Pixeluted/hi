@@ -14,6 +14,7 @@ local UICorner_6 = Instance.new("UICorner")
 local _6 = Instance.new("ImageButton")
 local UICorner_7 = Instance.new("UICorner")
 local exit = Instance.new("TextButton")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
 
 SupplyDropView.Name = "SupplyDropView"
 SupplyDropView.AnchorPoint = Vector2.new(0.5, 0.5)
@@ -129,5 +130,8 @@ exit.TextColor3 = Color3.fromRGB(255, 255, 255)
 exit.TextScaled = true
 exit.TextSize = 14.000
 exit.TextWrapped = true
+
+UIAspectRatioConstraint.Parent = SupplyDropView
+UIAspectRatioConstraint.AspectRatio = 1.702
 
 return SupplyDropView
